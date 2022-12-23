@@ -3,6 +3,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 body
@@ -24,12 +26,40 @@ body
 {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid#111;
+    border: none;
     outline: none;
     background-color: #111;
     color: #eee;
+
 }
 .grid-container > .operator 
 {
     background: #41b88375;
+    
+}
+.span-two 
+{
+    grid-column: span 2;
+}
+.grid-container > .output 
+{
+    grid-column: 1 / -1;
+    background-color: #222;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operand
+{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.grid-container > .output > .current-operand
+{
+    color: white;
+    font-size: 2.5rem;
 }
